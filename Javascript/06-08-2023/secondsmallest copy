@@ -1,0 +1,16 @@
+Array.prototype.secondSmallest = function () {
+ 
+  if (this.length < 2) {
+    throw new Error("more than one number should be there in the arrary");
+  }
+
+  this.sort(function (a, b) {
+    return a - b;
+  });
+
+  return this[1];
+};
+
+var numbers = [74, 452, 150, 54, 110];
+var secondSmallestnumber = numbers.secondSmallest();
+console.log(secondSmallestnumber);

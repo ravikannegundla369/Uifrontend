@@ -1,0 +1,17 @@
+function secondSmallest(array) {
+ 
+  if (array.length < 2) {
+    throw new Error("more than one number should be there in the arrary");
+  }
+
+  array.sort(function (a, b) {
+    return a - b;
+  });
+
+  return array[1];
+}
+
+
+var numbers = [74, 150, 54, 11,654];
+var secondsmallestnumber = secondSmallest(numbers);
+console.log(secondsmallestnumber);

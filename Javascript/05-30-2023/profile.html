@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <link rel="stylesheet" href="profile.css">
+    <title>Ravi Kannegundla profile</title>
+    
+</head>
+<body>
+    <h1>Ravi Kannegundla</h1>
+    <p> About Me : My name is Ravi Kannegundla.I graduated from UNT,Denton.</p>
+    <hr>
+<h1 >Profile Details</h1>
+
+<div id="myImg"></div>
+<img id="photo" src="image.jpg" width="250" height="250"></img>
+<h3 id="Name"></h3>
+<h3 id="DOB"></h3>
+<h3 id="Age"></h3>
+<h3 id="Gender"></h3>
+<h3 id="Mail"></h3>
+<h3 id="Address"></h3>
+<h3 id="Phone"></h3>
+<h3 id="Hobbies"></h3>
+<h3 id="Achievements"></h3>
+
+
+
+    <script>
+        const profile = {
+                name: "Ravi Kannegundla",
+                DOB: "10/13/1995",
+                age: 26,
+                gender: "Male",
+                mail: "Ravi Kannegundla",
+                address: "425 Bernard St, Denton,TX, 76201",
+                phone: "+1 (940)-299-7830",
+                hobbies: "Reading Books,Movies",
+                achievements: "",
+                photo: "",
+            };
+
+        document.getElementById("Name").innerHTML = "My Name Is : " + profile.name;
+        document.getElementById("DOB").innerHTML = " My DOB Is: " + profile.DOB;
+        document.getElementById("Age").innerHTML = "My Age Is: " + profile.age;
+        document.getElementById("Gender").innerHTML = "My Gender Is : " + profile.gender;
+        document.getElementById("Mail").innerHTML = "My Mail Id Is : " + profile.mail;
+        document.getElementById("Address").innerHTML = "My Address Is: " + profile.address;
+        document.getElementById("Phone").innerHTML = "My Phone Number Is : " + profile.phone; 
+        document.getElementById("Hobbies").innerHTML = "My Hobbies Are : " + profile.hobbies[length-1];
+        document.getElementById("Achievements").innerHTML = "My Achievements Are: " + profile.achievements; 
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="profile.css">
+    <title>june 6 th assignement</title>
+  
+    <script>
+        function displayValues() {
+            var firstName = document.getElementById('firstName').value;
+            var lastName = document.getElementById('lastName').value;
+            var gender = document.getElementById('gender').value;
+            var email = document.getElementById('email').value;
+            var phoneNumber = document.getElementById('phoneNumber').value;
+            var dob = document.getElementById('dob').value;
+
+            var hobbies = [];
+            var checkboxes = document.getElementsByName('hobbies');
+            for (var i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].checked) {
+                    hobbies.push(checkboxes[i].value);
+                }
+            }
+
+            var result = "First Name: " + firstName + "<br>" +
+                        "Last Name: " + lastName + "<br>" +
+                         "Gender: " + gender + "<br>" +
+                        "Email: " + email + "<br>" +
+                        "Phone Number: " + phoneNumber + "<br>" +
+                        "Date of Birth: " + dob + "<br>" +
+                        "Hobbies: " + hobbies.join(', ');
+
+            document.getElementById('result').innerHTML = result;
+        }
+    </script>
+</head>
+<body>
+    <h1>Ravi Kannegundla's Form</h1>
+    <form>
+        <label >First Name:</label>
+        <input type="text" id="firstName" name="firstName" ><br>
+
+        <label >Last Name:</label>
+        <input type="text" id="lastName" name="lastName" ><br>
+
+        <label >Gender:</label>
+        <input type="text" id="gender" name="gender" ><br>
+
+        <label >Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label >Phone Number:</label>
+        <input type="tel" id="phoneNumber" name="phoneNumber" required><br>
+
+        <label >Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required><br>
+
+        <label >Hobbies:</label><br>
+        <input type="checkbox" id="hobby1" name="hobbies" value="reading">
+        <label >Reading</label><br>
+        <input type="checkbox" id="hobby2" name="hobbies" value="gaming">
+        <label >Gaming</label><br>
+        <input type="checkbox" id="hobby3" name="hobbies" value="cooking">
+        <label >Cooking</label><br>
+        <input type="checkbox" id="hobby4" name="hobbies" value="watching_Tv">
+        <label >Watching_Tv</label><br>
+
+        <button type="button" onClick="displayValues()">Submit</button>
+    </form>
+
+    <div id="result"></div>
+</body>
+</html>

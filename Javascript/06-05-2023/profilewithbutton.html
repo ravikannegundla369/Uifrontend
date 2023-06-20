@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <link rel="stylesheet" href="profile.css">
+    <title>June 05 th assignement </title>
+    
+</head>
+<body>
+
+    <h1>Ravi Kannegundla's Profile </h1>
+    <form id="profileForm">
+      <label >First Name:-</label> <input type="text" id="firstName" >
+      <br><br>
+    
+      <label >Last Name:-</label> <input type="text" id="lastName" >
+      <br><br>
+    
+      <label >Date of Birth:-</label> <input type="date" id="dob" >
+      <br><br>
+    
+      <label >Email:-</label> <input type="email" id="email" >
+      <br><br>
+    
+      <label >Phone Number:-</label> <input type="text" id="phoneNumber" >
+      <br><br>
+    
+      <input type="submit" value="Submit Details">
+    </form>
+  
+    <div id="profileDisplay"></div>
+  
+    <script>
+      
+      const form = document.getElementById("profileForm");
+      form.addEventListener("submit", function(event) {
+        event.preventDefault(); 
+
+
+        const firstName = document.getElementById("firstName").value;
+        const lastName = document.getElementById("lastName").value;
+        const dob = document.getElementById("dob").value;
+        const email = document.getElementById("email").value;
+        const phoneNumber = document.getElementById("phoneNumber").value;
+        
+       
+        const profileDisplay = document.getElementById("profileDisplay");
+        profileDisplay.innerHTML = `
+        <p> Below are the details entered in the form </p>
+          <p>Entered First Name is :- ${firstName}</p>
+          <p>EnteredLast Name is:- ${lastName}</p>
+          <p>Entered DOB is :- ${dob}</p>
+          <p>Entered Email id:- ${email}</p>
+          <p>Entered Phone No:- ${phoneNumber}</p>
+        `;
+      });
+    </script>
+
+    </body>
+
+    </html>
